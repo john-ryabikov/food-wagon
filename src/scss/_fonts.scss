@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Tilda 300';
+    src: url('../fonts/Tilda Sans/TildaSans-Light.eot');
+    src: local('Tilda Sans Light'), local('TildaSans-Light'),
+        url('../fonts/Tilda Sans/TildaSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tilda Sans/TildaSans-Light.woff2') format('woff2'),
+        url('../fonts/Tilda Sans/TildaSans-Light.woff') format('woff'),
+        url('../fonts/Tilda Sans/TildaSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tilda 400';
+    src: url('../fonts/Tilda Sans/TildaSansVF.eot');
+    src: local('Tilda Sans VF'), local('TildaSansVF'),
+        url('../fonts/Tilda Sans/TildaSansVF.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tilda Sans/TildaSansVF.woff2') format('woff2'),
+        url('../fonts/Tilda Sans/TildaSansVF.woff') format('woff'),
+        url('../fonts/Tilda Sans/TildaSansVF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tilda 500';
+    src: url('../fonts/Tilda Sans/TildaSans-Medium.eot');
+    src: local('Tilda Sans Medium'), local('TildaSans-Medium'),
+        url('../fonts/Tilda Sans/TildaSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tilda Sans/TildaSans-Medium.woff2') format('woff2'),
+        url('../fonts/Tilda Sans/TildaSans-Medium.woff') format('woff'),
+        url('../fonts/Tilda Sans/TildaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tilda 600';
+    src: url('../fonts/Tilda Sans/TildaSans-Bold.eot');
+    src: local('Tilda Sans Bold'), local('TildaSans-Bold'),
+        url('../fonts/Tilda Sans/TildaSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tilda Sans/TildaSans-Bold.woff2') format('woff2'),
+        url('../fonts/Tilda Sans/TildaSans-Bold.woff') format('woff'),
+        url('../fonts/Tilda Sans/TildaSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tilda 800';
+    src: url('../fonts/Tilda Sans/TildaSans-ExtraBold.eot');
+    src: local('Tilda Sans Extra Bold'), local('TildaSans-ExtraBold'),
+        url('../fonts/Tilda Sans/TildaSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tilda Sans/TildaSans-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Tilda Sans/TildaSans-ExtraBold.woff') format('woff'),
+        url('../fonts/Tilda Sans/TildaSans-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Tilda 900';
+    src: url('../fonts/Tilda Sans/TildaSans-Black.eot');
+    src: local('Tilda Sans Black'), local('TildaSans-Black'),
+        url('../fonts/Tilda Sans/TildaSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Tilda Sans/TildaSans-Black.woff2') format('woff2'),
+        url('../fonts/Tilda Sans/TildaSans-Black.woff') format('woff'),
+        url('../fonts/Tilda Sans/TildaSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}

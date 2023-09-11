@@ -1,0 +1,1428 @@
+@charset "UTF-8";
+/*Стандартные настройки страницы =======================================*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Tilda 400";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+input::-moz-placeholder {
+  font-family: "Tilda 300";
+  color: #ececec;
+}
+
+input::placeholder {
+  font-family: "Tilda 300";
+  color: #ececec;
+}
+
+textarea::-moz-placeholder {
+  font-family: "Tilda 300";
+  color: #a0a0a0;
+}
+
+textarea::placeholder {
+  font-family: "Tilda 300";
+  color: #a0a0a0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Tilda 800";
+  font-weight: inherit;
+  font-size: inherit;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+  margin: 0;
+}
+
+.uncor {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+@font-face {
+  font-family: "Tilda 300";
+  src: url("../fonts/Tilda Sans/TildaSans-Light.eot");
+  src: local("Tilda Sans Light"), local("TildaSans-Light"), url("../fonts/Tilda Sans/TildaSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Tilda Sans/TildaSans-Light.woff2") format("woff2"), url("../fonts/Tilda Sans/TildaSans-Light.woff") format("woff"), url("../fonts/Tilda Sans/TildaSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda 400";
+  src: url("../fonts/Tilda Sans/TildaSansVF.eot");
+  src: local("Tilda Sans VF"), local("TildaSansVF"), url("../fonts/Tilda Sans/TildaSansVF.eot?#iefix") format("embedded-opentype"), url("../fonts/Tilda Sans/TildaSansVF.woff2") format("woff2"), url("../fonts/Tilda Sans/TildaSansVF.woff") format("woff"), url("../fonts/Tilda Sans/TildaSansVF.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda 500";
+  src: url("../fonts/Tilda Sans/TildaSans-Medium.eot");
+  src: local("Tilda Sans Medium"), local("TildaSans-Medium"), url("../fonts/Tilda Sans/TildaSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Tilda Sans/TildaSans-Medium.woff2") format("woff2"), url("../fonts/Tilda Sans/TildaSans-Medium.woff") format("woff"), url("../fonts/Tilda Sans/TildaSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda 600";
+  src: url("../fonts/Tilda Sans/TildaSans-Bold.eot");
+  src: local("Tilda Sans Bold"), local("TildaSans-Bold"), url("../fonts/Tilda Sans/TildaSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tilda Sans/TildaSans-Bold.woff2") format("woff2"), url("../fonts/Tilda Sans/TildaSans-Bold.woff") format("woff"), url("../fonts/Tilda Sans/TildaSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda 800";
+  src: url("../fonts/Tilda Sans/TildaSans-ExtraBold.eot");
+  src: local("Tilda Sans Extra Bold"), local("TildaSans-ExtraBold"), url("../fonts/Tilda Sans/TildaSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Tilda Sans/TildaSans-ExtraBold.woff2") format("woff2"), url("../fonts/Tilda Sans/TildaSans-ExtraBold.woff") format("woff"), url("../fonts/Tilda Sans/TildaSans-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda 900";
+  src: url("../fonts/Tilda Sans/TildaSans-Black.eot");
+  src: local("Tilda Sans Black"), local("TildaSans-Black"), url("../fonts/Tilda Sans/TildaSans-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Tilda Sans/TildaSans-Black.woff2") format("woff2"), url("../fonts/Tilda Sans/TildaSans-Black.woff") format("woff"), url("../fonts/Tilda Sans/TildaSans-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/*ШАПКА САЙТА
+=======================================*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  padding: 16px 220px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  position: relative;
+  width: 130px;
+}
+.header__text-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-style: normal;
+}
+.header__text-1 {
+  font-family: "Tilda 600";
+  padding-right: 12px;
+}
+.header__marker-img {
+  position: relative;
+  padding-right: 9px;
+}
+.header__text-2 b {
+  font-family: "Tilda 600";
+}
+.header__search-box {
+  position: relative;
+  font-family: "Tilda 600";
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__search-text {
+  position: relative;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding-right: 30px;
+}
+.header__search-img {
+  padding-right: 8px;
+}
+.header__search-text-1 {
+  line-height: 100%;
+}
+.header__button {
+  position: relative;
+  font-family: "Tilda 600";
+  width: 118px;
+  height: 46px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+  transition: all 0.3s;
+}
+.header__button:hover {
+  transform: scale(1.08, 1.08);
+}
+.header__button:active {
+  transform: scale(0.98, 0.98);
+}
+.header__user-img {
+  padding-right: 10px;
+}
+.header__btn-cont {
+  font-size: 18px;
+  color: #FFB800;
+}
+
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  .header {
+    padding: 16px 20px;
+  }
+  .header__logo {
+    width: 110px;
+  }
+  .header__text-box {
+    display: none;
+  }
+  .header__search-text {
+    display: none;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .header {
+    padding: 16px 20px;
+  }
+  .header__logo {
+    width: 110px;
+  }
+  .header__text-box {
+    display: none;
+  }
+  .header__search-text {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .header {
+    padding: 16px 80px;
+  }
+  .header__logo {
+    width: 110px;
+  }
+  .header__text-box {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1368px) {
+  .header {
+    padding: 16px 100px;
+  }
+}
+/*ОБЕРТКА САЙТА
+=======================================*/
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+  height: auto;
+}
+
+/*БЛОК-1
+=======================================*/
+.block-1 {
+  overflow-y: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgb(255, 213, 0) 20%, rgb(235, 159, 0) 100%);
+}
+.block-1__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 633px;
+}
+.block-1__info-title {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.info-title__main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 856px;
+}
+.info-title__h1 {
+  font-size: 88px;
+  font-style: normal;
+  color: #fff;
+  text-shadow: 0px 27px 82px 0px rgba(255, 174, 0, 0.28), 0px 14px 15px 0px rgba(255, 174, 0, 0.01);
+  margin-bottom: 15px;
+}
+.info-title__sub-h1 {
+  font-family: "Tilda 400";
+  font-size: 22px;
+  font-style: normal;
+  color: #504F4F;
+  margin-bottom: 32px;
+}
+.info-title__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+  background-color: #fff;
+  border-radius: 16px;
+}
+.info-title__card-top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 86px;
+  padding: 24px;
+  border-bottom: 0.5px solid #eee;
+}
+.info-title__card-tab {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(241, 114, 40, 0.1);
+  padding: 10px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.info-title__card-tab:last-child {
+  background: none;
+}
+.info-title__tab-icon {
+  margin-right: 10px;
+}
+.info-title__tab-label {
+  font-family: "Tilda 600";
+  color: #F17228;
+}
+.info-title__tab-label:last-child {
+  color: #757575;
+}
+.info-title__card-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 108px;
+  padding: 24px;
+}
+.info-title__input-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 60px;
+}
+.info-title__icon-box {
+  background-color: #F5F5F5;
+  height: 49px;
+  padding-left: 16px;
+  padding-top: 12px;
+  border-radius: 8px 0 0 8px;
+}
+.info-title__input {
+  font-family: "Tilda 400";
+  width: 593px;
+  height: 49px;
+  background-color: #F5F5F5;
+  border: none;
+  outline: none;
+  padding-left: 12px;
+  font-size: 18px;
+  border-radius: 0 8px 8px 0;
+}
+.info-title__input::-moz-placeholder {
+  color: #9E9E9E;
+}
+.info-title__input::placeholder {
+  color: #9E9E9E;
+}
+.info-title__button {
+  font-family: "Tilda 600";
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 100%;
+  border: none;
+  background: linear-gradient(138deg, #FF7A7A 0%, #F65900 100%);
+  cursor: pointer;
+  border-radius: 8px;
+}
+.info-title__btn-cont {
+  font-size: 18px;
+  color: #fff;
+  margin-left: 10px;
+}
+.info-title__img {
+  position: relative;
+  top: 130px;
+}
+
+/*БЛОК-2
+=======================================*/
+.block-2 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.block-2__container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  width: 1480px;
+  height: 415px;
+}
+.block-2__deal-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.deal-card__img-box {
+  position: relative;
+  width: 357px;
+  height: 301px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.deal-card__img {
+  width: 100%;
+}
+.deal-card__discount {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 140px;
+  height: 83px;
+  background-color: #FFB30E;
+  border-radius: 0px 32px 0px 0px;
+  color: #fff;
+}
+.deal-card__discount-num {
+  font-family: "Tilda 600";
+  font-size: 68px;
+  font-style: normal;
+}
+.deal-card__discount-persent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.deal-card__discount-span-1 {
+  font-family: "Tilda 600";
+  font-size: 32px;
+  font-style: normal;
+}
+.deal-card__discount-span-2 {
+  font-family: "Tilda 300";
+  font-size: 18px;
+  font-style: normal;
+}
+.deal-card__name {
+  font-family: "Tilda 600";
+  position: relative;
+  font-size: 22px;
+  font-style: normal;
+  color: #424242;
+  margin-top: 32px;
+}
+.deal-card__tab {
+  font-family: "Tilda 600";
+  position: relative;
+  font-size: 22px;
+  font-style: normal;
+  border-radius: 8px;
+  background: rgba(241, 114, 40, 0.2);
+  padding: 8px 16px;
+  color: #F17228;
+  margin-top: 14px;
+}
+
+/*БЛОК-3
+=======================================*/
+.block-3 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) 0%, rgba(253, 237, 202, 0) 100%);
+}
+.block-3__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 1480px;
+}
+.block-3__h2 {
+  font-size: 43px;
+  font-style: normal;
+  color: #F17228;
+  text-align: center;
+  margin-bottom: 58px;
+}
+.block-3__features {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  width: 1324px;
+}
+.block-3__feature-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 307px;
+}
+
+.feature-card__icon {
+  position: relative;
+}
+.feature-card__name {
+  font-family: "Tilda 600";
+  width: 100%;
+  color: #434343;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+.feature-card__text {
+  font-family: "Tilda 400";
+  width: 260px;
+  color: #9E9E9E;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+}
+
+/*БЛОК-4
+=======================================*/
+.block-4 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+.block-4__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 1480px;
+}
+.block-4__h3 {
+  font-size: 43px;
+  font-style: normal;
+  color: #212121;
+  margin-bottom: 88px;
+}
+.block-4__popular-items {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+.block-4__btn-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -121px;
+  width: 76px;
+  height: 76px;
+  border-radius: 92px;
+  border: 1px solid #FAAA01;
+  background: #FFB20E;
+  text-align: center;
+  cursor: pointer;
+  padding-right: 5px;
+}
+.block-4__btn-prev img {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.block-4__btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -121px;
+  width: 76px;
+  height: 76px;
+  border-radius: 92px;
+  border: 1px solid #FAAA01;
+  background: #FFB20E;
+  text-align: center;
+  line-height: 100%;
+  cursor: pointer;
+  padding-left: 5px;
+}
+.block-4__btn-next img {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.block-4__popular-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.popular-card {
+  width: 284px;
+  margin-right: 16px;
+}
+.popular-card:last-child {
+  margin-right: 0;
+}
+.popular-card__img {
+  position: relative;
+  border-radius: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.popular-card__name {
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  color: #424242;
+  margin-bottom: 8px;
+}
+.popular-card__location {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: center;
+  color: #FFB30E;
+  margin-bottom: 8px;
+}
+.popular-card__location-marker {
+  position: relative;
+  width: 14px;
+  height: 22px;
+}
+.popular-card__location-p {
+  font-family: "Tilda 400";
+  font-size: 22px;
+  font-style: normal;
+  margin-left: 8px;
+}
+.popular-card__price {
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  color: #212121;
+  margin-bottom: 16px;
+}
+.popular-card__btn {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background-color: #F17228;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 20px 40px 0px rgba(250, 99, 35, 0.24), 0px 5px 10px 0px rgba(253, 114, 92, 0.22);
+  font-family: "Tilda 600";
+  font-size: 18px;
+  font-style: normal;
+  color: #ffffff;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+}
+
+/*БЛОК-5
+=======================================*/
+.block-5 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.block-5__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 1480px;
+}
+.block-5__h3 {
+  font-size: 43px;
+  font-style: normal;
+  color: #212121;
+  margin-bottom: 88px;
+}
+.block-5__rest-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.block-5__btn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 21px 48px;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(141deg, #FFBA26 0%, #FF9A0E 100%);
+  box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+  cursor: pointer;
+}
+.block-5__btn-cont {
+  font-family: "Tilda 600";
+  font-size: 18px;
+  font-style: normal;
+}
+.block-5__btn-icon {
+  position: relative;
+  width: 9px;
+  height: 14px;
+  margin-left: 10px;
+}
+
+.rest-row {
+  width: 100%;
+  margin-bottom: 64px;
+}
+.rest-row__rest-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.rest-card {
+  width: 357px;
+  margin-right: 16px;
+}
+.rest-card:last-child {
+  margin-right: 0;
+}
+.rest-card__info-labels {
+  font-family: "Tilda 600";
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+.rest-card__info-label-1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #F17228;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.rest-card__label-1-icon {
+  position: relative;
+  width: 18px;
+  height: 22px;
+  margin-right: 10px;
+}
+.rest-card__label-1-cont {
+  font-size: 22px;
+  font-style: normal;
+}
+.rest-card__info-label-2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #FFB30E;
+  border-radius: 8px;
+}
+.rest-card__label-2-icon {
+  position: relative;
+  width: 18px;
+  height: 22px;
+  margin-right: 10px;
+}
+.rest-card__label-2-cont {
+  font-size: 22px;
+  font-style: normal;
+}
+.rest-card__img {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  z-index: -1;
+}
+.rest-card__rest-info {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.rest-card__rest-icon {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-right: 24px;
+}
+.rest-card__rest-rate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.rest-card__rest-title {
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  margin-bottom: 4px;
+}
+.rest-card__rate-text {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  color: #FFB30E;
+}
+.rest-card__rate-icon {
+  position: relative;
+  width: 25px;
+  height: 23px;
+  margin-right: 8px;
+}
+.rest-card__rate-cont {
+  font-family: "Tilda 300";
+  font-size: 22px;
+  font-style: normal;
+}
+.rest-card__status {
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  padding: 8px 16px;
+  color: #F17228;
+  background: rgba(241, 114, 40, 0.2);
+  border-radius: 16px;
+}
+.rest-card__status-green {
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  padding: 8px 16px;
+  color: #79B93C;
+  background: rgba(121, 185, 60, 0.2);
+  border-radius: 16px;
+}
+
+/*БЛОК-6
+=======================================*/
+.block-6 {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #FEEFD0;
+  padding-top: 130px;
+}
+.block-6__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 1480px;
+}
+.block-6__prems {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 55px;
+  margin-bottom: 80px;
+}
+.block-6__promo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 60px;
+  z-index: 1;
+}
+.block-6__img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.prems {
+  width: 1230px;
+  height: 246px;
+  border-radius: 46px;
+  background: #FFF;
+  box-shadow: 0px 27px 82px 0px rgba(255, 174, 0, 0.28), 0px 14px 15px 0px rgba(255, 174, 0, 0.01);
+}
+.prems__prem-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  width: 318px;
+}
+.prems__prem-img {
+  position: relative;
+  width: 136px;
+  height: 136px;
+  margin-right: 30px;
+}
+.prems__prem-cont {
+  font-family: "Tilda 800";
+  width: 240px;
+  height: 96px;
+  line-height: 130%;
+  font-size: 35px;
+  font-style: normal;
+  background: linear-gradient(150deg, #FB3C00 0%, #FFB800 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.promo {
+  width: 1230px;
+}
+.promo__img {
+  position: relative;
+  width: 603px;
+}
+.promo__text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 480px;
+  margin-top: 54px;
+}
+.promo__h4 {
+  position: relative;
+  font-family: "Tilda 800";
+  font-size: 68px;
+  font-style: normal;
+  color: #FF8A00;
+  margin-bottom: 16px;
+}
+.promo__p {
+  position: relative;
+  width: 420px;
+  font-family: "Tilda 300";
+  font-size: 18px;
+  font-style: normal;
+  color: #827E7E;
+  margin-bottom: 40px;
+  line-height: 140%;
+}
+.promo__btns {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.promo__btn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 203px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  filter: drop-shadow(0px 20px 40px rgba(255, 174, 0, 0.29)) drop-shadow(0px 5px 10px rgba(255, 174, 0, 0.26));
+  margin-right: 8px;
+  cursor: pointer;
+}
+.promo__btn:last-child {
+  width: 190px;
+}
+.promo__btn-cont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.promo__btn-logo {
+  position: relative;
+  width: 34px;
+  margin-right: 12px;
+}
+.promo__btn-title {
+  position: relative;
+  width: 58px;
+  margin-bottom: 6px;
+}
+.promo__btn-title[alt=Apple-title] {
+  width: 103px;
+}
+.promo__btn-text {
+  position: relative;
+  width: 127px;
+}
+.promo__btn-text[alt=Apple-text] {
+  width: 112px;
+}
+
+/*ПОДВАЛ САЙТА
+=======================================*/
+.footer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.footer__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 1480px;
+}
+.footer__h4 {
+  position: relative;
+  width: 100%;
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  color: #FFF;
+  text-align: start;
+}
+.footer__cities {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer__subs {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer__rights {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cities {
+  margin-top: 40px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #424242;
+}
+.cities__towns {
+  font-family: "Tilda 300";
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 120px;
+}
+.cities__town {
+  font-size: 18px;
+  font-style: normal;
+  color: #F5F5F5;
+  margin-bottom: 16px;
+}
+.cities__town:last-child {
+  margin-bottom: 0;
+}
+
+.subs {
+  margin-top: 63px;
+  padding-bottom: 63px;
+  border-bottom: 1px solid #424242;
+}
+.subs__menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 610px;
+}
+.subs__menu-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 170px;
+}
+.subs__menu-title {
+  position: relative;
+  width: 100%;
+  font-family: "Tilda 600";
+  font-size: 22px;
+  font-style: normal;
+  color: #FFF;
+  text-align: start;
+  margin-bottom: 40px;
+}
+.subs__menu-link {
+  position: relative;
+  font-family: "Tilda 300";
+  font-size: 18px;
+  font-style: normal;
+  color: #F5F5F5;
+  margin-bottom: 16px;
+}
+.subs__follow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.subs__follow-title {
+  font-family: "Tilda 600";
+  font-size: 18px;
+  font-style: normal;
+  color: #F5F5F5;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.subs__foolow-soc-row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 24px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.subs__follow-soc {
+  position: relative;
+  color: #424242;
+  font-size: 24px;
+  cursor: pointer;
+}
+.subs__follow-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 485px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.subs__follow-form-p {
+  position: relative;
+  font-family: "Tilda 600";
+  font-size: 18px;
+  font-style: normal;
+  color: #BBB;
+  margin-bottom: 40px;
+}
+.subs__follow-send {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+}
+.subs__follow-input-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  width: 310px;
+  height: 60px;
+  background-color: #424242;
+  border-radius: 8px;
+  padding-left: 16px;
+  color: #ADADAD;
+  font-size: 24px;
+}
+.subs__follow-input {
+  font-family: "Tilda 400";
+  width: 90%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 18px;
+  background-color: inherit;
+  color: #fff;
+}
+.subs__follow-input::-moz-placeholder {
+  color: #ADADAD;
+}
+.subs__follow-input::placeholder {
+  color: #ADADAD;
+}
+.subs__follow-form-btn {
+  font-family: "Tilda 600";
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 100%;
+  border: none;
+  background: var(--yellow-button, linear-gradient(150deg, #FFB800 0%, #FF8A00 100%));
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0px 14px 32px 0px rgba(255, 178, 14, 0.29), 0px 5px 8px 0px rgba(222, 151, 0, 0.24);
+}
+
+.rights {
+  font-family: "Tilda 300";
+  margin-top: 16px;
+  color: #F5F5F5;
+  font-size: 15px;
+  font-style: normal;
+}
+.rights__copyright {
+  position: relative;
+}
+.rights__copyright b {
+  font-family: "Tilda 600";
+}
+.rights__author {
+  position: relative;
+}
+.rights__author-link {
+  font-family: "Tilda 600";
+  font-style: normal;
+  color: #F5F5F5;
+}/*# sourceMappingURL=index.css.map */

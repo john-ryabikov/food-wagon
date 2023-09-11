@@ -1,0 +1,287 @@
+.block-5 {
+    width: 100%;
+    @include flex-column();
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__container {
+        //@include border();
+        @include flex-column();
+        justify-content: center;
+        width: 1200px;
+    }
+    &__h3 {
+        position: relative;
+        font-size: 52px;
+        font-style: normal;
+        color: #212121;
+        margin-bottom: 88px;
+    }
+    &__rest-row {
+        //@include border();
+        @include flex-row();
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__btn {
+        @include flex-row();
+        width: 270px;
+        padding: 20px 40px;
+        color: #ffffff;
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(141deg, #FFBA26 0%, #FF9A0E 100%);
+        box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+        cursor: pointer;
+        @include btn-eff();
+    }
+    &__btn-cont {
+        font-family: 'Tilda 600';
+        font-size: 16px;
+        font-style: normal;
+    }
+    &__btn-icon {
+        position: relative;
+        width: 6px;
+        height: 10px;
+        margin-left: 10px;
+    }
+}
+.rest-row {
+    width: 100%;
+    margin-bottom: 64px;
+    &__rest-card {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+.rest-card {
+    //@include border();
+    width: 270px;
+    margin-right: 16px;
+    &:last-child {
+        margin-right: 0;
+    }
+    &__info-labels {
+        //@include border();
+        font-family: 'Tilda 600';
+        @include flex-row();
+        position: absolute;
+        top: 18px;
+        left: 18px; 
+    }
+    &__info-label-1 {
+        @include flex-row();
+        padding: 5px 10px;
+        color: #ffffff;
+        background-color: #F17228;
+        border-radius: 8px;
+        margin-right: 8px;
+    }
+    &__label-1-icon {
+        position: relative;
+        width: 14px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    &__label-1-cont {
+        font-size: 16px;
+        font-style: normal;
+    }
+    &__info-label-2 {
+        @include flex-row();
+        padding: 5px 10px;
+        color: #ffffff;
+        background-color: #FFB30E;
+        border-radius: 8px;
+    }
+    &__label-2-icon {
+        position: relative;
+        width: 14px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    &__label-2-cont {
+        font-size: 16px;
+        font-style: normal;
+    }
+    &__img {
+        position: relative;
+        width: 100%;
+        border-radius: 16px;
+        margin-bottom: 28px;
+        z-index: -1;
+    }
+    &__rest-info {
+        @include flex-row();
+        margin-bottom: 32px;
+    }
+    &__rest-icon {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        margin-right: 24px;
+    }
+    &__rest-rate {
+        @include flex-column();
+        align-items: flex-start;
+    }
+    &__rest-title {
+        font-family: 'Tilda 600';
+        font-size: 18px;
+        font-style: normal;
+        margin-bottom: 4px;
+    }
+    &__rate-text {
+        @include flex-row();
+        align-items: flex-start;
+        color: #FFB30E;
+    }
+    &__rate-icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+    &__rate-cont {
+        font-family: 'Tilda 300';
+        font-size: 18px;
+        font-style: normal;
+    }
+    &__status {
+        font-family: 'Tilda 600';
+        font-size: 16px;
+        font-style: normal;
+        padding: 8px 16px;
+        color: #F17228;
+        background: rgba(241, 114, 40, 0.20);
+        border-radius: 16px;
+    }
+    &__status-green {
+        font-family: 'Tilda 600';
+        font-size: 16px;
+        font-style: normal;
+        padding: 8px 16px;
+        color: #79B93C;
+        background: rgba(121, 185, 60, 0.20);
+        border-radius: 16px;
+    }
+}
+
+//Под Smaller smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0) and (max-width: 649px) {
+    .block-5 {
+        &__container {
+            //@include border();
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px; 
+        }
+        &__h3 {
+            font-size: 42px;
+            text-align: center;
+        }
+        &__rest-row {
+            //@include border();
+            @include flex-column();
+            align-items: center;
+            justify-content: center;
+        }
+        &__btn {
+            width: 270px;
+        }
+    }
+    .rest-row {
+        margin-bottom: 60px;
+    }
+    .rest-card {
+        //@include border();
+        margin-right: 0;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }    
+}
+
+//Под Tablet and larger smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+    .block-5 {
+        &__container {
+            //@include border();
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__h3 {
+            text-align: center;
+        }
+        &__rest-row {
+            //@include border();
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+        }
+        &__btn {
+            width: 270px;
+        }
+    }
+    .rest-row {
+        margin-bottom: 0;
+    }
+    .rest-card {
+        //@include border();
+        margin-right: 0;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        width: calc(100% / 2 - 70px * 0.5);
+    }    
+}
+
+//Под Laptops, larger tablets (landscape) and small desktops ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .block-5 {
+        &__container {
+            //@include border();
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__h3 {
+            text-align: center;
+        }
+        &__rest-row {
+            //@include border();
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+        }
+        &__btn {
+            width: 270px;
+        }
+    }
+    .rest-row {
+        margin-bottom: 0;
+    }
+    .rest-card {
+        //@include border();
+        margin-right: 0;
+        margin-bottom: 60px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        width: calc(100% / 2 - 70px * 0.5);
+    }     
+}
+
+//Под Larger desktops and monitors----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+    .block-5 {
+        &__container {
+            //@include border();
+            width: 1080px;
+        }    
+    }   
+}

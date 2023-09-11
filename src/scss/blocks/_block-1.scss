@@ -1,0 +1,508 @@
+.block-1 {
+    //@include border();
+    width: 100%;
+    overflow-y: hidden;
+    @include flex-column();
+    background: linear-gradient(90deg, rgba(255,213,0,1) 20%, rgba(235,159,0,1) 100%);
+    &__container {
+        //@include border();
+        @include flex-column();
+        width: 1200px;
+        height: 540px;
+    }
+    &__info-title {
+        //@include border();
+        @include flex-row();
+        justify-content: space-between;
+        width: 100%; 
+    }
+}    
+.info-title {
+    &__main {
+        //@include border();
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 600px;
+        z-index: 2;
+    }
+    &__h1 {
+        font-size: 76px;
+        font-style: normal;
+        color: #fff;
+        text-shadow: 0px 27px 82px 0px rgba(255, 174, 0, 0.28), 0px 14px 15px 0px rgba(255, 174, 0, 0.01);
+        margin-bottom: 15px;
+    }
+    &__sub-h1 {
+        font-family: 'Tilda 400';
+        font-size: 18px;
+        font-style: normal;
+        color: #504F4F;
+        margin-bottom: 32px;
+    }
+    &__card {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        box-shadow: 0px 20px 40px 0px rgba(255, 174, 0, 0.29), 0px 5px 10px 0px rgba(255, 174, 0, 0.26);
+        background-color: #fff;
+        border-radius: 16px;
+    }
+    &__card-top{
+        @include flex-row();
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 86px;
+        padding: 24px;
+        border-bottom: 0.5px solid #eee;
+    }
+    &__card-tab {
+        //@include border();
+        @include flex-row();
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 24px;
+        font-size: 14px;
+        color: #757575;
+        border-radius: 8px;
+        cursor: pointer;
+        background: none;
+        transition: all 0.3s;
+        &:hover {
+            background: rgba(244, 105, 25, 0.1);
+        }
+        &_on {
+            @include flex-row();
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px 24px;
+            font-size: 14px;
+            border-radius: 8px;
+            color: #F17228;
+            background: rgba(244, 105, 25, 0.2);
+            pointer-events: none;
+            cursor: default;
+            &:last-child {
+                margin-left: 16px;
+            }
+        }
+        &:last-child {
+            margin-left: 16px;
+        }
+    }
+    &__tab-icon {
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    &__tab-label {
+        font-family: 'Tilda 600';
+    }
+    &__card-bottom{
+        //@include border();
+        @include flex-row();
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 108px;
+        padding: 24px;
+    }
+    &__input-box {
+        @include flex-row();
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 60px;
+    }
+    &__icon-box {
+        background-color: #F5F5F5;
+        height: 60px;
+        padding-left: 16px;
+        padding-top: 16px;
+        border-radius: 8px 0 0 8px;
+    }
+    &__input {
+        font-family: 'Tilda 400';
+        width: 350px;
+        height: 60px;
+        background-color: #F5F5F5;
+        border: none;
+        outline: none;
+        padding-left: 12px;
+        font-size: 14px;
+        border-radius: 0 8px 8px 0;
+        &::placeholder {
+            color: #9E9E9E;
+        }
+    }
+    &__button {
+        font-family: 'Tilda 600';
+        @include flex-row();
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 60px;
+        border: none;
+        background: linear-gradient(138deg, #FF7A7A 0%, #F65900 100%);
+        cursor: pointer;
+        border-radius: 8px;
+        @include btn-eff();
+    }
+    &__btn-cont {
+        font-size: 16px;
+        color: #fff;
+        margin-left: 10px;
+    }
+    &__img {
+        //@include border();
+        position: relative;
+        width: 540px;
+        top: 140px;
+        right: 26px;
+        z-index: 1;
+    }
+}
+
+//Под Smaller smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0) and (max-width: 480px) {
+    .block-1 {
+        overflow-x: hidden;
+        height: 1100px;
+        &__container {
+            //@include border();
+            justify-content: flex-start;
+            width: 340px;
+            height: 100%;
+            padding-left: 0;
+            padding-top: 80px;
+        }
+        &__info-title {
+            @include flex-column();
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }    
+    .info-title {
+        &__main {
+            //@include border();
+            align-items: center;
+            width: 100%;
+        }
+        &__h1 {
+            font-size: 60px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        &__sub-h1 {
+            //@include border();
+            width: 340px;
+            text-align: center;
+        }
+        &__card {
+            align-items: center;
+        }
+        &__card-top{
+            justify-content: space-around;
+        }
+        &__card-tab {
+            justify-content: center;
+            padding: 10px 0;
+            width: 50%;
+            &_on {
+                justify-content: center;
+                padding: 10px 0;
+                width: 50%;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+        &__card-bottom{
+            @include flex-column();
+            justify-content: center;
+            height: auto;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__btn-cont {
+            font-size: 16px;
+            color: #fff;
+            margin-left: 10px;
+        }
+        &__img {
+            //@include border();
+            width: 640px;
+            top: 70px;
+            right: 0;
+            left: 25px;
+        }
+    }
+}
+
+//Под Tablet and larger smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 481px) and (max-width: 560px) {
+    .block-1 {
+        overflow-x: hidden;
+        height: 1100px;
+        &__container {
+            //@include border();
+            justify-content: flex-start;
+            width: 340px;
+            height: 100%;
+            padding-left: 0;
+            padding-top: 80px;
+        }
+        &__info-title {
+            @include flex-column();
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }    
+    .info-title {
+        &__main {
+            //@include border();
+            align-items: center;
+            width: 100%;
+        }
+        &__h1 {
+            font-size: 68px;
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        &__sub-h1 {
+            //@include border();
+            width: 340px;
+            text-align: center;
+        }
+        &__card {
+            align-items: center;
+        }
+        &__card-top{
+            justify-content: space-around;
+        }
+        &__card-tab {
+            justify-content: center;
+            padding: 10px 0;
+            width: 50%;
+            &_on {
+                justify-content: center;
+                padding: 10px 0;
+                width: 50%;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+        &__card-bottom{
+            @include flex-column();
+            justify-content: center;
+            height: auto;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__btn-cont {
+            font-size: 16px;
+            color: #fff;
+            margin-left: 10px;
+        }
+        &__img {
+            //@include border();
+            width: 640px;
+            top: 70px;
+            right: 0;
+            left: 25px;
+        }
+    }
+}
+
+//Под iPad mini ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 561px) and (max-width: 767px) {
+    .block-1 {
+        overflow-x: hidden;
+        height: 1100px;
+        &__container {
+            //@include border();
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+            padding-top: 80px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        &__info-title {
+            @include flex-column();
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }    
+    .info-title {
+        &__main {
+            //@include border();
+            align-items: center;
+            width: 100%;
+        }
+        &__h1 {
+            font-size: 58px;
+            text-align: center;
+        }
+        &__sub-h1 {
+            //@include border();
+            width: 340px;
+            text-align: center;
+        }
+        &__card {
+            align-items: center;
+        }
+        &__card-top{
+            justify-content: space-around;
+        }
+        &__card-tab {
+            justify-content: center;
+            padding: 10px 0;
+            width: 50%;
+            &_on {
+                justify-content: center;
+                padding: 10px 0;
+                width: 50%;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+        &__card-bottom{
+            @include flex-column();
+            justify-content: center;
+            height: auto;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__btn-cont {
+            font-size: 16px;
+            color: #fff;
+            margin-left: 10px;
+        }
+        &__img {
+            //@include border();
+            width: 640px;
+            top: 70px;
+            right: 0;
+            left: -45px;
+        }
+    }
+}
+
+//Под Laptops, larger tablets (landscape) and small desktops ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .block-1 {
+        overflow-x: hidden;
+        &__container {
+            //@include border();
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+            padding-top: 80px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 80px;
+        }
+        &__info-title {
+            //@include border();
+            @include flex-row();
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }    
+    .info-title {
+        &__main {
+            //@include border();
+            width: 480px;
+        }
+        &__h1 {
+            font-size: 54px;
+        }
+        &__sub-h1 {
+            //@include border();
+            width: 100%;
+        }
+        &__card {
+            align-items: center;
+        }
+        &__card-top{
+            justify-content: space-around;
+        }
+        &__card-tab {
+            justify-content: center;
+            padding: 10px 0;
+            width: 50%;
+            &_on {
+                justify-content: center;
+                padding: 10px 0;
+                width: 50%;
+                &:last-child {
+                    margin-left: 0;
+                }
+            }
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+        &__card-bottom{
+            @include flex-column();
+            justify-content: center;
+            height: auto;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__btn-cont {
+            font-size: 16px;
+            color: #fff;
+            margin-left: 10px;
+        }
+        &__img {
+            //@include border();
+            position: absolute;
+            width: 500px;
+            top: 160px;
+            right: -130px;
+        }
+    }
+}
+
+//Под Larger desktops and monitors----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+    .block-1 {
+        &__container {
+            width: 1080px;
+        }
+    }     
+}

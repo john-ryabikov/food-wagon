@@ -1,0 +1,387 @@
+.footer {
+    width: 100%;
+    @include flex-column();
+    background: #212121;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    &__container {
+        @include flex-column();
+        justify-content: center;
+        width: 1200px;
+    }
+    &__h4 {
+        position: relative;
+        width: 100%;
+        font-family: 'Tilda 600';
+        font-size: 18px;
+        font-style: normal;
+        color: #FFF;
+        text-align: start;
+    }
+    &__cities {
+        @include flex-row();
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__subs {
+        @include flex-row();
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__rights {
+        @include flex-row();
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+.cities {
+    margin-top: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #424242;
+    &__towns {
+        font-family: 'Tilda 300';
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 120px;
+    }
+    &__town {
+        font-size: 14px;
+        font-style: normal;
+        color: #F5F5F5;
+        margin-bottom: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+.subs {
+    margin-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #424242;
+    &__menu {
+        @include flex-row();
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 610px;
+    }
+    &__menu-col {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 170px;
+    }
+    &__menu-title {
+        position: relative;
+        width: 100%;
+        font-family: 'Tilda 600';
+        font-size: 18px;
+        font-style: normal;
+        color: #FFF;
+        text-align: start;
+        margin-bottom: 40px;
+    }
+    &__menu-link {
+        position: relative;
+        font-family: 'Tilda 300';
+        font-size: 14px;
+        font-style: normal;
+        color: #F5F5F5;
+        margin-bottom: 16px;
+        transition: all 0.3s;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    &__follow {
+        @include flex-column();
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__follow-title {
+        font-family: 'Tilda 600';
+        font-size: 16px;
+        font-style: normal;
+        color: #F5F5F5;
+        text-transform: uppercase;
+        opacity: 0.6;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+    }
+    &__foolow-soc-row {
+        //@include border();
+        @include flex-row();
+        width: 92px;
+        height: 24px;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    &__follow-soc {
+        position: relative;
+        color: #424242; 
+        font-size: 20px; 
+        cursor: pointer;
+    }
+    &__follow-form {
+        @include flex-column();
+        width: 485px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__follow-form-p {
+        position: relative;
+        font-family: 'Tilda 600';
+        font-size: 16px;
+        font-style: normal;
+        color: #BBB;
+        margin-bottom: 30px;
+    }
+    &__follow-send {
+        @include flex-row();
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+    }
+    &__follow-input-box {
+        @include flex-row();
+        align-items: center;
+        justify-content: flex-start;
+        width: 310px;
+        height: 60px;
+        background-color: #424242;
+        border-radius: 8px;
+        padding-left: 16px;
+        color: #ADADAD;
+        font-size: 20px;
+    }
+    &__follow-input {
+        font-family: 'Tilda 400';
+        width: 90%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        font-size: 14px;
+        background-color: inherit;
+        color: #fff;
+        &::placeholder {
+            color: #ADADAD;
+        }
+    }
+    &__follow-form-btn {
+        font-family: 'Tilda 600';
+        @include flex-row();
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 100%;
+        border: none;
+        background: var(--yellow-button, linear-gradient(150deg, #FFB800 0%, #FF8A00 100%));
+        cursor: pointer;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #fff;
+        box-shadow: 0px 14px 32px 0px rgba(255, 178, 14, 0.29), 0px 5px 8px 0px rgba(222, 151, 0, 0.24);
+        @include btn-eff();
+    }
+}
+.rights {
+    font-family: 'Tilda 300';
+    margin-top: 16px;
+    color: #F5F5F5;
+    font-size: 12px;
+    font-style: normal;
+    &__copyright {
+        position: relative;
+        b {
+            font-family: 'Tilda 600';
+        }
+    }
+    &__author {
+        position: relative;
+    }
+    &__author-link {
+        font-family: 'Tilda 600';
+        font-style: normal;
+        color: #F5F5F5;
+    }
+}
+
+//Под Smaller smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0) and (max-width: 649px) {
+    .footer {
+        padding-bottom: 20px;
+        &__container {
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__cities {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+        }
+        &__subs {
+            @include flex-column();
+            justify-content: flex-start;
+        }
+        &__rights {
+            //@include border();
+            @include flex-column();
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+        }
+    }
+    .cities {
+        &__towns {
+            //@include border();
+            margin-bottom: 16px;
+        }
+    }
+    .subs {
+        //@include border();
+        &__menu {
+            //@include border();
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            margin-bottom: 60px;
+        }
+        &__menu-col {
+            //@include border();
+            width: calc(100% / 2 - 60px * 0.5);
+            &:last-child {
+                margin-top: 60px;
+            }
+        }
+        &__follow {
+            width: 95%;
+        }
+        &__follow-form {
+            width: 100%;
+        }
+        &__follow-send {
+            //@include border();
+            @include flex-column();
+            justify-content: space-between;
+            width: 100%;
+            height: 150px;
+        }
+        &__follow-input-box {
+            width: 100%;
+        }
+        &__follow-form-btn {
+            width: 100%;
+            height: 60px;
+        }
+    }    
+}
+
+//Под Tablet and larger smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+    .footer {
+        padding-bottom: 20px;
+        &__container {
+            //@include border();
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__subs {
+            @include flex-column();
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+    .subs {
+        &__menu {
+            //@include border();
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        &__follow {
+            width: 100%;
+        }
+        &__follow-form {
+            width: 100%;
+        }
+        &__follow-send {
+            //@include border();
+            @include flex-column();
+            justify-content: space-between;
+            width: 100%;
+            height: 150px;
+        }
+        &__follow-input-box {
+            width: 100%;
+        }
+        &__follow-form-btn {
+            width: 100%;
+            height: 60px;
+        }
+    }        
+}
+
+//Под Laptops, larger tablets (landscape) and small desktops ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .footer {
+        padding-bottom: 20px;
+        &__container {
+            //@include border();
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__subs {
+            @include flex-column();
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+    .subs {
+        &__menu {
+            //@include border();
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        &__follow {
+            width: 100%;
+        }
+        &__follow-form {
+            width: 100%;
+        }
+        &__follow-send {
+            //@include border();
+            @include flex-column();
+            justify-content: space-between;
+            width: 100%;
+            height: 150px;
+        }
+        &__follow-input-box {
+            width: 100%;
+        }
+        &__follow-form-btn {
+            width: 100%;
+            height: 60px;
+        }
+    }        
+}
+
+//Под Larger desktops and monitors----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+    .footer {
+        &__container {
+            width: 1080px;
+        }
+    }        
+}

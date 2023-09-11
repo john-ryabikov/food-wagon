@@ -1,0 +1,160 @@
+.block-2 {
+    //@include border();
+    width: 100%;
+    @include flex-column();
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__container {
+        //@include border();
+        @include flex-row();
+        justify-content: space-between;
+        width: 1200px;
+        height: 415px;
+    }
+    &__deal-card {
+        @include flex-column();
+        align-items: flex-start;
+    }
+}
+.deal-card {
+    &__img-box {
+        position: relative;
+        width: 270px;
+        height: 225px;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+    &__img {
+        width: 100%;
+    }
+    &__discount {
+        @include flex-row();
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 110px;
+        height: 60px;
+        background-color: #FFB30E;
+        border-radius: 0px 32px 0px 0px;
+        color: #fff;
+    }
+    &__discount-num {
+        font-family: 'Tilda 600';
+        font-size: 44px;
+        font-style: normal;
+        margin-right: 6px;
+    }
+    &__discount-persent {
+        @include flex-column();
+        justify-content: flex-start;
+    }
+    &__discount-span-1 {
+        font-family: 'Tilda 600';
+        font-size: 20px;
+        font-style: normal;
+    }
+    &__discount-span-2 {
+        font-family: 'Tilda 300';
+        font-size: 14px;
+        font-style: normal;
+    }
+    &__name {
+        font-family: 'Tilda 600';
+        position: relative;
+        font-size: 18px;
+        font-style: normal;
+        color: #424242;
+        margin-top: 32px;
+    }
+    &__tab {
+        font-family: 'Tilda 600';
+        position: relative;
+        font-size: 16px;
+        font-style: normal;
+        border-radius: 8px;
+        background: rgba(241, 114, 40, 0.20);
+        padding: 8px 16px;
+        color: #F17228;
+        margin-top: 14px;
+    }
+}
+
+//Под Smaller smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0) and (max-width: 649px) {
+    .block-2 {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        &__container {
+            //@include border();
+            @include flex-column();
+            width: 100%;
+            height: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__deal-card {
+            //@include border();
+            @include flex-column();
+            align-items: flex-start;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+//Под Tablet and larger smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+    .block-2 {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        &__container {
+            //@include border();
+            flex-wrap: wrap;
+            width: 90%;
+            height: auto;
+        }
+        &__deal-card {
+            //@include border();
+            @include flex-column();
+            margin-bottom: 80px;
+            width: calc(100% / 2 - 30px * 0.5);
+        }
+    }
+}
+
+//Под Laptops, larger tablets (landscape) and small desktops ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .block-2 {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        &__container {
+            //@include border();
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            height: auto;
+        }
+        &__deal-card {
+            //@include border();
+            @include flex-column();
+            margin-bottom: 80px;
+            width: calc(100% / 2 - 30px * 0.5);
+        }
+    }
+}
+
+//Под Larger desktops and monitors----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+    .block-2 {
+        &__container {
+            width: 1080px;
+            height: 415px;
+        }
+    }
+    .deal-card {
+        //@include border();
+        &__img-box {
+            width: 240px;
+            height: 200px;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.block-3 {
+    width: 100%;
+    @include flex-column();
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, rgba(255, 206, 103, 0.22) 0%, rgba(253, 237, 202, 0.00) 100%);
+    &__container {
+        //@include border();
+        @include flex-column();
+        justify-content: center;
+        width: 1200px;
+    }
+    &__h2 {
+        font-size: 52px;
+        font-style: normal;
+        color: #F17228;
+        text-align: center;
+        margin-bottom: 58px;
+    }
+    &__features {
+        //@include border();
+        @include flex-row();
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__feature-card {
+        @include flex-column();
+    }
+}
+.feature-card {
+    &__icon {
+        position: relative;
+        width: 120px;
+    }
+    &__name {
+        font-family: 'Tilda 600';
+        width: 100%;
+        color: #434343;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        margin-top: -20px; 
+        margin-bottom: 10px; 
+    }
+    &__text {
+        font-family: 'Tilda 400';
+        width: 220px;
+        color: #9E9E9E;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+    }
+}
+
+//Под Smaller smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 0) and (max-width: 649px) {
+    .block-3 {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        &__container {
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        &__h2 {
+            font-size: 42px;
+        }
+        &__features {
+            @include flex-column();
+        }
+        &__feature-card {
+            margin-bottom: 80px;
+        }
+    }   
+}
+
+//Под Tablet and larger smartphones ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 650px) and (max-width: 767px) {
+    .block-3 {
+        &__container {
+            //@include border();
+            width: 90%;
+        }
+        &__h2 {
+            font-size: 42px;
+        }
+        &__features {
+            //@include border();
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+        &__feature-card {
+            //@include border();
+            justify-content: flex-end;
+            width: calc(100% / 2 - 30px * 0.5);
+            height: 200px;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+//Под Laptops, larger tablets (landscape) and small desktops ----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+    .block-3 {
+        &__features {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+        }
+        &__feature-card {
+            //@include border();
+            justify-content: flex-end;
+            width: calc(100% / 2 - 30px * 0.5);
+            height: 200px;
+            margin-bottom: 80px;
+        }
+    }
+}
+
+//Под Larger desktops and monitors----------------------------------------------------------------------------------------------------------------------------------------
+@media only screen and (min-width: 1180px) and (max-width: 1300px) {
+    .block-3 {
+        &__container {
+            //@include border();
+            width: 1080px;
+        }
+    }
+}
