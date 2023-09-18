@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-wagon/static/css/main.a35cdd2a.css",
-    "main.js": "/food-wagon/static/js/main.a021867a.js",
+    "main.css": "/food-wagon/static/css/main.136434b9.css",
+    "main.js": "/food-wagon/static/js/main.d73d475f.js",
     "static/media/TildaSansVF.eot": "/food-wagon/static/media/TildaSansVF.005175b228e91dd10bed.eot",
     "static/media/TildaSansVF.ttf": "/food-wagon/static/media/TildaSansVF.d7fb943e3572a8cd9522.ttf",
     "static/media/food.png": "/food-wagon/static/media/food.151f4200b3aa77b43527.png",
@@ -77,11 +77,11 @@
     "static/media/btn-next.svg": "/food-wagon/static/media/btn-next.09645d1297d55b9269ffddf117f0de79.svg",
     "index.html": "/food-wagon/index.html",
     "static/media/rectangle.svg": "/food-wagon/static/media/rectangle.480705454f3e02f208e96cc6bfb93a39.svg",
-    "main.a35cdd2a.css.map": "/food-wagon/static/css/main.a35cdd2a.css.map",
-    "main.a021867a.js.map": "/food-wagon/static/js/main.a021867a.js.map"
+    "main.136434b9.css.map": "/food-wagon/static/css/main.136434b9.css.map",
+    "main.d73d475f.js.map": "/food-wagon/static/js/main.d73d475f.js.map"
   },
   "entrypoints": [
-    "static/css/main.a35cdd2a.css",
-    "static/js/main.a021867a.js"
+    "static/css/main.136434b9.css",
+    "static/js/main.d73d475f.js"
   ]
 }
