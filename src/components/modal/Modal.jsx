@@ -1,4 +1,7 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+
 
 class Modal extends React.Component {
     constructor (props) {
@@ -11,14 +14,17 @@ class Modal extends React.Component {
     }   
     render() {
         return (
-            <div className={this.props.active} onClick={this.props.closeModal}>
+            <div className={this.props.active}>
                 <div className={this.props.activeCont} onClick={(e) => e.stopPropagation()}>
+                    <div className="modal__close-btn" onClick={this.props.closeModal}>
+                        <FontAwesomeIcon icon={faXmark} />
+                    </div>
                     <p className="modal__title">Account Login</p>
                     <form className="modal__form">
                         <label htmlFor="user_name" className="modal__form-label">Username</label>
-                        <input type="text" name="user_name" className="modal__form-input" onChange={(e) => this.setState({user_name: e.target.value})} />
+                        <input type="text" name="user_name" className="modal__form-input" value={this.state.user_name} onChange={(e) => this.setState({user_name: e.target.value})} />
                         <label htmlFor="user_pass" className="modal__form-label">Password</label>
-                        <input type="password" name="user_pass" className="modal__form-input" onChange={(e) => this.setState({user_pass: e.target.value})} />
+                        <input type="password" name="user_pass" className="modal__form-input" value={this.state.user_pass} onChange={(e) => this.setState({user_pass: e.target.value})} />
                         <div className="modal__form-line">
                             <div className="modal__form-checkbox">
                                 <label htmlFor="user_remember" className="modal__form-label">Remember me</label>

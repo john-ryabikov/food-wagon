@@ -122,6 +122,15 @@
         color: #F17228;
         margin-top: 16px;
     }
+    &__close-btn {
+        position: absolute;
+        top: 0;
+        right: -30px;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+
+    }
 }
 .active {
     opacity: 1;

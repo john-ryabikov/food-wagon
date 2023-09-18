@@ -8,19 +8,36 @@ import BlockFive from "./components/block-5/BlockFive.jsx"
 import BlockSix from "./components/block-6/BlockSix.jsx"
 import Footer from "./components/footer/Footer.jsx"
 import Modal from "./components/modal/Modal.jsx"
+import Alert from "./components/alert/Alert.jsx"
 import '../node_modules/swiper/swiper.scss';
 import '../node_modules/swiper/swiper-bundle.min.css'
 import '../node_modules/swiper/modules/navigation.scss'
 
 class App extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             modalActive: true,
+            alertStatus: false,
+            alertText: "",
+            alertColor: "",
         }
-        this.openModal = this.openModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
+        this.onShow = this.onShow.bind(this)
+        this.openModal = this.openModal.bind(this)
+        this.closeModal = this.closeModal.bind(this)
         this.logIn = this.logIn.bind(this)
+
+    }
+    // Функция уведомления
+    onShow() {
+        this.setState({
+            alertStatus: true
+        })
+        setTimeout(()=>{
+            this.setState({
+                alertStatus: false
+            })    
+        }, 2500)
     }
     // Функции модального окна
     openModal() {
@@ -36,15 +53,28 @@ class App extends React.Component {
     }
     logIn(acc) {
         if (acc.user_name === "Admin" && acc.user_pass === "admin") {
-            alert("Succses!");
             this.closeModal()
+            this.onShow()
+            this.setState({
+                alertText: "Good",
+                alertColor: "alert__text good"
+            });
         } else {
-            alert("Login or password is invalid! Try again.")
+            this.onShow()
+            this.setState({
+                alertText: "Bad, try again!",
+                alertColor: "alert__text invalid"
+            });
         }
     }
     render () {
         return (
-            <>
+            <>  
+                <Alert 
+                    onShow={this.state.alertStatus}
+                    text={this.state.alertText}
+                    textColor={this.state.alertColor}
+                />
                 <Modal 
                     active={this.state.modalActive ? "modal" : "modal active"}
                     activeCont={this.state.modalActive ? "modal__content" : "modal__content_active"}  
